@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.platform       = :ios, '7.0'
   s.preserve_paths = '*.js'
 
-  s.dependency 'React'
+  s.dependency 'React-Core'
 
   s.source_files = 'ReactNativeViewPDF/*.{h,m}'
   s.public_header_files = ['ReactNativeViewPDF/*.h']
