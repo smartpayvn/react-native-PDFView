@@ -146,7 +146,7 @@
     }
 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: URL
-                                                           cachePolicy: NSURLRequestUseProtocolCachePolicy
+                                                           cachePolicy: NSURLRequestReloadIgnoringCacheData
                                                        timeoutInterval: 60.0];
     if (_urlProps != nil) {
         [self enrichRequestWithUrlProps: request];
@@ -251,7 +251,7 @@
 - (BOOL)isNewInput {
     return ![_resource isEqualToString: currentResource] ||
         ![_resourceType isEqualToString: currentResourceType] ||
-        ![_resourceType isEqualToString: currentFileFrom];
+        ![_fileFrom isEqualToString: currentFileFrom];
 }
 
 - (BOOL)isSupportedResourceType {
